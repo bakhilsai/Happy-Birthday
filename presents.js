@@ -1,9 +1,4 @@
-// presents "data" file. A present is a JSON object with the following parameters
-// -- title (required): 	displayed in the circle in the main page, can be arbitrary HTML
-// -- payload (required): 	the part of the present that will get loaded into the viewer, arbitrary HTML
-// -- id (optional): 		an HTML id that will get set on the outer div of the present, so later customizations can be done
-// -- callback (optional): 	a function that will get called as the present is being loaded. Must take no arguments
-//	if you need arguments, wrap the function with an anonymous function
+
 
 
 function YoutubeString(videoId, offset) {
@@ -20,11 +15,11 @@ var presents = [
 { 	
 	title: "Pragnya Rocks!", 
 	id: "katt",
-	// payload: YoutubeString("kLDitGAUrno")
+	
 },
 {
 	title: "<img class='blackBorder' src='hotpockets.jpg' width='90px' height='90px' />",
-	// payload: YoutubeString("J9c9lAfXQHs")
+	
 },
 {
 	title: "<img class='blackBorder' src='loris.jpg' width='90px' height='90px' />",
@@ -33,16 +28,16 @@ var presents = [
 {
 	title: "Another Year, Another Adventure!", 
 	id: "map",
-	// payload: "<div id='denver_map' style='width:500px;height:300px' />",
+	
 	callback: InitMap
 },
 {
 	title: "Cake? No, Pragnya's sweeter! ",
-	// payload: YoutubeString("mPt0sjn0jSw", 57)
+	
 },
 {
 	title: "Pragnya's day, world slays!",
-	// payload: Mp3String("liog.mp3")
+	
 },
 {
 	title: "Cuteness overload: Pragnya!",
@@ -58,18 +53,17 @@ var presents = [
 },
 {
 	title: "Cheers, Pragnya!", 
-	// payload: "<div style='width:300px;height:500px;font-size:2em;font-weight:bold'>HEY LADY! ITS YOUR BIRFDAY! I MITE LET YOU USE MY BLANKET TODAY!<br/><img class='whiteBorder' src='schoeff.jpg' alt='schoeff on blanket' /><br/>BUT PROBLY NOT!</div>"
-},
+	},
 {
 	title: "<img src='tf2Plate.png' alt='tf2 plate' />",
 },
 {
 	title: "Pragnya, sparkling since forever!",
-	// payload: YoutubeString("jWkC6RHxR0E", 0)
+	
 },
 {
 	title: "Subway Dancin'",
-	// payload: YoutubeString("VQ3d3KigPQM", 15)
+	
 },
 {
 	title: "<img src='pumpkinThumb.png' alt='pumpkin' />",
@@ -81,14 +75,11 @@ var presents = [
 }
 	];
 	
-	///////// CALLBACKS //////////////
-	// These methods are defined in the above presents variable in the "callbacks" label
-	// These are called as the present is being loaded into the viewer
 
 	function InitMap() {
 		if (GBrowserIsCompatible()) {
 			var map = new GMap2(document.getElementById("denver_map"));
-			// center on a decent place in Denver
+			
 			map.setCenter(new GLatLng(39.75, -105), 13);
 			map.setUIToDefault();
 		}
